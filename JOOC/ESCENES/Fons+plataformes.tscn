@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://TileMaps/Backgrounds/terra normal.png" type="Texture" id=1]
+[ext_resource path="res://TileMaps/Backgrounds/teirra minecraft.png" type="Texture" id=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 545.582, 336.514 )
+scale = Vector2( 0.88533, 1.06712 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( -20, -2420, 1208, 3008 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 547.796, -1891.21 )
+scale = Vector2( 1.04757, 1.98012 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 0, -1.20399, 1028, 628 )
+
+[node name="TileMap" type="TileMap" parent="."]
+
