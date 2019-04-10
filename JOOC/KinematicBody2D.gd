@@ -7,6 +7,7 @@ var gravetat = Vector2(0,9.8)
 func _ready():
 	if is_on_floor():
 		velocitat += salt
+		$AudioStreamPlayer.play()
 
 func _physics_process(delta):
 	mou()
@@ -20,6 +21,7 @@ func mou():
 		velocitat.x = -velocitat_maxima
 	if is_on_floor():
 		velocitat += salt
+		$AudioStreamPlayer.play()
 	else:
 		velocitat += gravetat
 		
