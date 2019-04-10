@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/ladybug.png-bb58d83608c2c3c72f827c70121d9d44.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://TileMaps/PNG/Enemies/ladybug.png"
+dest_files=[ "res://.import/ladybug.png-bb58d83608c2c3c72f827c70121d9d44.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
