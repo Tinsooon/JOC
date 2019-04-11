@@ -1,23 +1,34 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://TileMaps/Backgrounds/terra normal.png" type="Texture" id=1]
-[ext_resource path="res://TileMaps/Backgrounds/teirra minecraft.png" type="Texture" id=2]
+[ext_resource path="res://TileMaps/Backgrounds/fons.png" type="Texture" id=2]
+[ext_resource path="res://TileMaps/Backgrounds/backgroundEmpty.png" type="Texture" id=3]
+
+[sub_resource type="TileSet" id=1]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="sota_terra" type="Sprite" parent="."]
 position = Vector2( 545.582, 336.514 )
 scale = Vector2( 0.88533, 1.06712 )
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( -20, -2420, 1208, 3008 )
+region_rect = Rect2( 12, -2420, 992, 3008 )
 
-[node name="Sprite2" type="Sprite" parent="."]
-position = Vector2( 547.796, -1891.21 )
+[node name="terra" type="Sprite" parent="."]
+position = Vector2( 540.502, -1982.46 )
 scale = Vector2( 1.04757, 1.98012 )
 texture = ExtResource( 2 )
 region_enabled = true
-region_rect = Rect2( 0, -1.20399, 1028, 628 )
+region_rect = Rect2( 0, -1.20399, 1028, 757.204 )
+
+[node name="cel" type="Sprite" parent="."]
+position = Vector2( 555.51, -6614.03 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 48, -4716, 1084, 7828 )
 
 [node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
 
