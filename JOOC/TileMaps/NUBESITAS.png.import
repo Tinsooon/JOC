@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sandHalf_mid.png-3cc4c5b0c12b65c6d9a5da5badf7b097.stex"
+path="res://.import/NUBESITAS.png-ef40d2f5d54d2eb97f34bb58a46ce02c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://TileMaps/PNG/Ground/Sand/sandHalf_mid.png"
-dest_files=[ "res://.import/sandHalf_mid.png-3cc4c5b0c12b65c6d9a5da5badf7b097.stex" ]
+source_file="res://TileMaps/NUBESITAS.png"
+dest_files=[ "res://.import/NUBESITAS.png-ef40d2f5d54d2eb97f34bb58a46ce02c.stex" ]
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
-flags/repeat=0
+flags/repeat=1
 flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
