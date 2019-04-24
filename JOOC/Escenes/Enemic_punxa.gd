@@ -2,6 +2,7 @@ extends KinematicBody2D
 var velocitat_maxima = 200
 var gravetat = Vector2(0,9.8)
 var velocitat = Vector2()
+var damage = 1
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -28,4 +29,6 @@ func mou():
 		velocitat.x = -velocitat_maxima
 
 func _on_Area2D_area_entered(area):
-	pass # Replace with function body.
+	if area.has_method('hit'):
+		area.hit(damage)
+	

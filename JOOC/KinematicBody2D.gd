@@ -3,9 +3,12 @@ var salt = Vector2(0,-300)
 var velocitat = Vector2()
 var velocitat_maxima = 200
 var gravetat = Vector2(0,9.8)
+var vida = 3
+var posicio = Vector2(0,0)
 # Called when the node enters the scene tree for the first time.
 
 func _ready():
+	position = posicio
 	if is_on_floor():
 		velocitat += salt
 		$AudioStreamPlayer.play()
@@ -30,6 +33,13 @@ func mou():
 func anima():
 	if velocitat.y > 0:
 		$AnimatedSprite.play('Jump')
+
+func hit(damage):
+	vida -= damage
+	if vida <= 0:
+		mor()
+func mor():
+	position = posicio
 	
 func _on_Area2D_area_entered(area):
 	print('au')
