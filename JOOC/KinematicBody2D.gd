@@ -5,6 +5,7 @@ var velocitat_maxima = 200
 var gravetat = Vector2(0,9.8)
 var vida = 3
 var posicio = Vector2(0,0)
+
 # Called when the node enters the scene tree for the first time.
 
 func _ready():
@@ -36,11 +37,12 @@ func anima():
 
 func hit(damage):
 	vida -= damage
+	$AnimatedSprite.play('hurt')
 	if vida <= 0:
 		mor()
 func mor():
 	position = posicio
 	
 func _on_Area2D_area_entered(area):
+	hit(damage)
 	print('au')
-	$AnimatedSprite.play('hurt')
