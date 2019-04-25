@@ -12,12 +12,8 @@ func _ready():
 	#pass
 	
 	
-	var energia = 100
-	var gana = 10
 	
 func actualitza_barra (energia):
-	energia = energia - gana
-	actualitza_barra(energia)
+	$TextureProgress.value = energia
 	
-func actualitzar_barra(energia):
-	get_node("/root/TextureProgress").set_value(energia)
+	
