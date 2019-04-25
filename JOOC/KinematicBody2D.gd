@@ -29,11 +29,12 @@ func mou():
 		$AudioStreamPlayer.play()
 	else:
 		velocitat += gravetat
-		
 	velocitat = move_and_slide(velocitat, Vector2(0, -1))
+	
 func anima():
 	if velocitat.y > 0:
 		$AnimatedSprite.play('Jump')
+	#if 
 
 func hit(damage):
 	vida -= damage
