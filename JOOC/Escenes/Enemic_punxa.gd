@@ -11,6 +11,8 @@ var damage = 1
 func _ready():
 	$Area2D.damage = damage
 
+func _physics_process(delta):
+	mou()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
@@ -25,6 +27,7 @@ func mou():
 		velocitat += gravetat
 	else:
 		velocitat += gravetat
+	velocitat = move_and_slide(velocitat, Vector2(0, -1))
 
 func _on_Area2D_area_entered(area):
 	if area.has_method('hit'):
