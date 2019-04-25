@@ -42,6 +42,7 @@ func hit(damage):
 		mor()
 func mor():
 	position = posicio
+	vida = 3
 	
 func _on_Area2D_area_entered(area):
 	hit(area.damage)

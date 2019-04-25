@@ -9,24 +9,20 @@ var damage = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-#	velocitat.x = 0
-#	if is_on_floor() and velocitat.x > 0:
-#		velocitat.x = velocitat_maxima
-#		$AnimatedSprite.flip_h = false
-#	if is_on_floor() and velocitat.x < 0:
-#		velocitat.x = 
-	pass
+	$Area2D.damage = damage
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
 func mou():
 	velocitat.x = 0
-	if is_on_floor() and velocitat.x > 0:
+	if is_on_floor():
 		velocitat.x = velocitat_maxima
-		$AnimatedSprite.flip_h = false
-	if is_on_floor() and velocitat.x < 0:
-		velocitat.x = -velocitat_maxima
+		#$AnimatedSprite.flip_h = false
+	#if is_on_floor() and velocitat.x < 0:
+		#velocitat.x = -velocitat_maxima
+	if not is_on_floor():
+		velocitat += gravetat
 	else:
 		velocitat += gravetat
 
