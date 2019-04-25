@@ -27,6 +27,8 @@ func mou():
 		$AnimatedSprite.flip_h = false
 	if is_on_floor() and velocitat.x < 0:
 		velocitat.x = -velocitat_maxima
+	else:
+		velocitat += gravetat
 
 func _on_Area2D_area_entered(area):
 	if area.has_method('hit'):

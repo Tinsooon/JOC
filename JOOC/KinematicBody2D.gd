@@ -1,10 +1,10 @@
 extends KinematicBody2D
-var salt = Vector2(0,-300)
+var salt = Vector2(0,-500)
 var velocitat = Vector2()
 var velocitat_maxima = 200
 var gravetat = Vector2(0,9.8)
 var vida = 3
-var posicio = Vector2(0,0)
+var posicio = Vector2(870.571,4136.038)
 
 # Called when the node enters the scene tree for the first time.
 
@@ -44,5 +44,5 @@ func mor():
 	position = posicio
 	
 func _on_Area2D_area_entered(area):
-	hit(damage)
+	hit(area.damage)
 	print('au')
