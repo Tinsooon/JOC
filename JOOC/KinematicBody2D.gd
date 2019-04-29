@@ -2,7 +2,7 @@ extends KinematicBody2D
 var salt = Vector2(0,-500)
 var velocitat = Vector2()
 var velocitat_maxima = 200
-var gravetat = Vector2(0,9.8)
+var gravetat = Vector2(0,11)
 var vida = 3
 var hurt = false
 var posicio = Vector2(870.571,4136.038)

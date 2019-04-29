@@ -1,6 +1,6 @@
 extends KinematicBody2D
 var velocitat_maxima = 200
-var gravetat = Vector2(0,9.8)
+var gravetat = Vector2(0,11)
 var velocitat = Vector2()
 var damage = 1
 # Declare member variables here. Examples:
