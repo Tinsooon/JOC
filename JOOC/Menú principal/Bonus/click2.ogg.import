@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/click2.ogg-3f270f92a620cc146637ecff2d694211.oggstr"
+
+[deps]
+
+source_file="res://Menú principal/Bonus/click2.ogg"
+dest_files=[ "res://.import/click2.ogg-3f270f92a620cc146637ecff2d694211.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
