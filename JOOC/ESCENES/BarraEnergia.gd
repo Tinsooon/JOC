@@ -16,4 +16,10 @@ func _ready():
 func actualitza_barra (energia):
 	$TextureProgress.value = energia
 	
+func actualitza_cors(vida):
+	$TextureProgress.value = vida 
+	
+	 
+	
+	
 	

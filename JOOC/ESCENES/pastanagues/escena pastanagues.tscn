@@ -3,14 +3,14 @@
 [ext_resource path="res://Area2D.gd" type="Script" id=1]
 [ext_resource path="res://Personatges+tot/PNG/Items/carrot.png" type="Texture" id=2]
 
-[node name="Area2D" type="Area2D"]
+[node name="Pastanaga" type="Area2D"]
 position = Vector2( 0.185829, 0.557495 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="pastanaga" type="Sprite" parent="."]
 texture = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true

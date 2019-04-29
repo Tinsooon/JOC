@@ -19,6 +19,10 @@ config/name="JOOC"
 run/main_scene="res://ESCENES/Fons+plataformes.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/width=1071
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"
