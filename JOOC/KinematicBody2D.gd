@@ -6,7 +6,7 @@ var gravetat = Vector2(0,11)
 var vida = 3
 var hurt = false
 var posicio = Vector2(870.571,4136.038)
-
+var velocitat_trampoli = Vector2(0, 1000)
 # Called when the node enters the scene tree for the first time.
 
 func _ready():
@@ -54,3 +54,8 @@ func _on_Area2D_area_entered(area):
 
 func _on_AnimatedSprite_animation_finished():
 	hurt = false
+
+
+
+func _on_trampoli_body_entered(body):
+	pass 
