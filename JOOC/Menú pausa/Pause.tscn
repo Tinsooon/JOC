@@ -15,7 +15,6 @@ script = ExtResource( 1 )
 pause_mode = 2
 
 [node name="Buttons" type="Control" parent="Control"]
-editor/display_folded = true
 margin_right = 40.0
 margin_bottom = 40.0
 
@@ -44,10 +43,10 @@ margin_bottom = 385.0
 text = "Exit"
 
 [node name="Return" type="Button" parent="Control/Buttons"]
-margin_left = -300.0
-margin_top = 406.0
-margin_right = -150.0
-margin_bottom = 450.0
+margin_left = -299.928
+margin_top = 404.466
+margin_right = -149.928
+margin_bottom = 448.466
 text = "Return"
 
 [node name="Pause" type="TextureButton" parent="Control"]
