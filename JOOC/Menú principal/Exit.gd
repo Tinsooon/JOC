@@ -1,4 +1,4 @@
-extends Control
+extends TextureButton
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -6,19 +6,8 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	connect("pressed", get_node('../..'), "_on_Exit_pressed")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-
-
-func _on_Play_pressed():
-	get_tree().change_scene("res://Escenes/Fons+plataformes.tscn")
-
-
-func _on_Tutorial_pressed():
-	get_tree().change_scene("res://Menú principal/Tutorial.tscn")
-
-func _on_Exit_pressed():
-	get_tree().quit()

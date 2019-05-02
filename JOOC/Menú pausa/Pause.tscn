@@ -18,35 +18,35 @@ pause_mode = 2
 margin_right = 40.0
 margin_bottom = 40.0
 
-[node name="Continue" type="Button" parent="Control/Buttons"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Buttons"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -237.708
+margin_top = 244.868
+margin_right = -208.708
+margin_bottom = 272.868
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Continue" type="Button" parent="Control/Buttons/VBoxContainer"]
 pause_mode = 2
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -320.0
-margin_top = 306.0
-margin_right = -170.0
-margin_bottom = 346.0
+margin_right = 69.0
+margin_bottom = 20.0
 text = "Continue"
 
-[node name="Exit" type="Button" parent="Control/Buttons"]
+[node name="Exit" type="Button" parent="Control/Buttons/VBoxContainer"]
 pause_mode = 2
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -320.0
-margin_top = 347.0
-margin_right = -170.0
-margin_bottom = 385.0
+margin_top = 24.0
+margin_right = 69.0
+margin_bottom = 44.0
 text = "Exit"
 
-[node name="Return" type="Button" parent="Control/Buttons"]
-margin_left = -299.928
-margin_top = 404.466
-margin_right = -149.928
-margin_bottom = 448.466
+[node name="Return" type="Button" parent="Control/Buttons/VBoxContainer"]
+pause_mode = 2
+margin_top = 48.0
+margin_right = 69.0
+margin_bottom = 68.0
 text = "Return"
 
 [node name="Pause" type="TextureButton" parent="Control"]
@@ -56,6 +56,7 @@ margin_bottom = 50.0
 texture_normal = ExtResource( 2 )
 script = ExtResource( 3 )
 
-[connection signal="pressed" from="Control/Buttons/Exit" to="Control" method="_on_Exit_pressed"]
-[connection signal="pressed" from="Control/Buttons/Return" to="Control" method="_on_Return_pressed"]
+[connection signal="pressed" from="Control/Buttons/VBoxContainer/Continue" to="Control" method="_on_Continue_pressed"]
+[connection signal="pressed" from="Control/Buttons/VBoxContainer/Exit" to="Control" method="_on_Exit_pressed"]
+[connection signal="pressed" from="Control/Buttons/VBoxContainer/Return" to="Control" method="_on_Return_pressed"]
 [connection signal="pressed" from="Control/Pause" to="Control" method="_on_Pause_pressed"]

@@ -17,7 +17,8 @@ func _on_Continue_pressed():
 		$Tween.start()
 
 func _on_Return_pressed():
-	get_tree().change_scene("res://Menú principal/Menú.tscn")
+	var error = get_tree().change_scene("res://Menú principal/Menú.tscn")
+	print(error)
 
 func _on_Exit_pressed():
 	get_tree().quit()
