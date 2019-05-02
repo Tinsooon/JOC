@@ -14,7 +14,7 @@
 [ext_resource path="res://ESCENES/AudioStreamPlayer.gd" type="Script" id=12]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 15, 0, 15 )
+points = PoolVector2Array( 0, 0, 32, 0, 0, 0, 0, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 45, 0, 45, 36, 0, 36 )
@@ -40,7 +40,7 @@ points = PoolVector2Array( 0, 0, 45, 0, 45, 36, 0, 36 )
 10/texture = ExtResource( 5 )
 10/tex_offset = Vector2( 0, 0 )
 10/modulate = Color( 1, 1, 1, 1 )
-10/region = Rect2( 0, 0, 64, 64 )
+10/region = Rect2( 0, 0, 32, 32 )
 10/tile_mode = 0
 10/occluder_offset = Vector2( 0, 0 )
 10/navigation_offset = Vector2( 0, 0 )
@@ -62,21 +62,21 @@ position = Vector2( 582.706, 1615.76 )
 scale = Vector2( 1.23516, 1 )
 texture = ExtResource( 2 )
 region_enabled = true
-region_rect = Rect2( 8, -1464, 680, 5312 )
+region_rect = Rect2( 8, -1464, 2388, 5312 )
 
 [node name="terra" type="Sprite" parent="."]
-position = Vector2( 581.668, -2034.25 )
+position = Vector2( 569.939, -2034.25 )
 scale = Vector2( 1.1821, 1.98012 )
 texture = ExtResource( 3 )
 region_enabled = true
-region_rect = Rect2( -12, -8, 704, 1032 )
+region_rect = Rect2( -12, -8, 2480, 1032 )
 
 [node name="cel" type="Sprite" parent="."]
 position = Vector2( 570.802, -6589.12 )
 scale = Vector2( 0.78046, 0.999258 )
 texture = ExtResource( 4 )
 region_enabled = true
-region_rect = Rect2( 4, -2244, 1116, 7111.06 )
+region_rect = Rect2( 4, -2244, 3728, 7111.06 )
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2( 0, 2 )
