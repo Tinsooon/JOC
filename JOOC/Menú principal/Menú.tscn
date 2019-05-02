@@ -53,7 +53,6 @@ custom_fonts/font = SubResource( 1 )
 text = "Play"
 
 [node name="Tutorial" type="TextureButton" parent="Control/VBoxContainer"]
-editor/display_folded = true
 margin_top = 53.0
 margin_right = 190.0
 margin_bottom = 102.0
