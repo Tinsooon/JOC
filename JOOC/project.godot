@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="JOOC"
-run/main_scene="res://ESCENES/Fons+plataformes.tscn"
+run/main_scene="res://Menú principal/Menú.tscn"
 config/icon="res://icon.png"
 
 [display]
