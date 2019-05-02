@@ -58,4 +58,4 @@ func _on_AnimatedSprite_animation_finished():
 
 
 func _on_trampoli_body_entered(body):
-	pass 
+	velocitat += Vector2(0,-700)
