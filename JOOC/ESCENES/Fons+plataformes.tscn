@@ -89,14 +89,15 @@ script = ExtResource( 7 )
 [node name="KinematicBody2D" parent="." instance=ExtResource( 8 )]
 position = Vector2( 284.025, 4168.29 )
 
-[node name="KinematicBody2D2" parent="." instance=ExtResource( 9 )]
+[node name="conill" parent="." instance=ExtResource( 9 )]
 position = Vector2( 870.571, 4136.04 )
 
 [node name="trampoli" parent="." instance=ExtResource( 10 )]
-position = Vector2( 870.563, -162.633 )
+position = Vector2( 773.139, 3328.58 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )
 script = ExtResource( 12 )
 
+[connection signal="body_entered" from="trampoli" to="conill" method="_on_trampoli_body_entered"]
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]
