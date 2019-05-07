@@ -44,14 +44,10 @@ func hit(damage):
 	hurt = true
 	if vida <= 0:
 		mor()
-		
 func mor():
 	position = posicio
-
-
-func _on_trampoli_body_entered(body):
-	velocitat += Vector2(0,-700)
-		
+	vida = 3
+	
 func _on_Area2D_area_entered(area):
 	hit(area.damage)
 	print('au')
@@ -59,3 +55,7 @@ func _on_Area2D_area_entered(area):
 func _on_AnimatedSprite_animation_finished():
 	hurt = false
 
+
+
+func _on_trampoli_body_entered(body):
+	velocitat += Vector2(0,-700)

@@ -1,21 +1,21 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
-[ext_resource path="res://Personatges+tot/PNG/Players/bunny2_stand.png" type="Texture" id=2]
-[ext_resource path="res://Personatges+tot/PNG/Players/bunny2_jump.png" type="Texture" id=3]
-[ext_resource path="res://Personatges+tot/PNG/Players/bunny2_hurt.png" type="Texture" id=4]
+[ext_resource path="res://Personatges+tot/PNG/Players/bunny2_hurt.png" type="Texture" id=2]
+[ext_resource path="res://Personatges+tot/PNG/Players/bunny2_stand.png" type="Texture" id=3]
+[ext_resource path="res://Personatges+tot/PNG/Players/bunny2_jump.png" type="Texture" id=4]
 [ext_resource path="res://Sons/Jump2.wav" type="AudioStream" id=5]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
-"loop": true,
-"name": "Jump",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 4 ) ],
+"frames": [ ExtResource( 2 ) ],
 "loop": true,
 "name": "hurt",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "Jump",
 "speed": 5.0
 } ]
 
@@ -24,19 +24,6 @@ radius = 70.0
 
 [sub_resource type="CapsuleShape2D" id=3]
 radius = 73.9874
-
-[sub_resource type="ParticlesMaterial" id=4]
-flag_disable_z = true
-gravity = Vector3( 0, 98, 0 )
-angular_velocity = -40.0
-orbit_velocity = 0.0
-orbit_velocity_random = 0.0
-
-[sub_resource type="AnimatedTexture" id=5]
-frames = 3
-fps = 169.6
-frame_1/delay_sec = 0.0
-frame_2/delay_sec = 0.0
 
 [node name="conill" type="KinematicBody2D"]
 position = Vector2( 91, -9 )
@@ -55,6 +42,7 @@ __meta__ = {
 position = Vector2( -89, -11 )
 frames = SubResource( 1 )
 animation = "Jump"
+frame = 1
 playing = true
 __meta__ = {
 "_edit_group_": true
@@ -73,13 +61,6 @@ position = Vector2( -91, 9 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 0, -1.75806 )
 shape = SubResource( 3 )
-
-[node name="Particles2D" type="Particles2D" parent="."]
-amount = 10
-speed_scale = 2.0
-local_coords = false
-process_material = SubResource( 4 )
-texture = SubResource( 5 )
 
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
 [connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
