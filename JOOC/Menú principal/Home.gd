@@ -13,5 +13,5 @@ func _ready():
 #	pass
 
 
-func _on_TextureButton_pressed():
-	pass # Replace with function body.
+func _on_Home_pressed():
+	get_tree().change_scene("res://Menú principal/Menú.tscn")
