@@ -58,7 +58,7 @@ position = Vector2( -140.665, -8.60309 )
 script = ExtResource( 1 )
 
 [node name="sotaterra" type="Sprite" parent="."]
-position = Vector2( 582.706, 1615.76 )
+position = Vector2( 548.147, 1610.62 )
 scale = Vector2( 1.23516, 1 )
 texture = ExtResource( 2 )
 region_enabled = true
