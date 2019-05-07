@@ -8,5 +8,4 @@ func ready():
 func _on_moneda_body_entered(area):
 	if area.get_name() == "conill":
 		self.queue_free()
-		global_var.Pastanaga += 20
-		
+		#global_var.Pastanaga += 20
