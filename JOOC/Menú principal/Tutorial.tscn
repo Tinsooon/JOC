@@ -19,9 +19,9 @@ script = ExtResource( 2 )
 margin_right = 40.0
 margin_bottom = 40.0
 
-[node name="TextureButton" type="TextureButton" parent="Control/VBoxContainer"]
+[node name="Home" type="TextureButton" parent="Control/VBoxContainer"]
 margin_right = 50.0
 margin_bottom = 50.0
 texture_normal = ExtResource( 3 )
 
-[connection signal="pressed" from="Control/VBoxContainer/TextureButton" to="Control" method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/Home" to="Control" method="_on_Home_pressed"]
