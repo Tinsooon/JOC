@@ -28,6 +28,9 @@ func mou():
 	if is_on_floor():
 		velocitat += salt
 		$AudioStreamPlayer.play()
+	if position.y >= 4311.6:
+		position = posicio
+		
 	else:
 		velocitat += gravetat
 	velocitat = move_and_slide(velocitat, Vector2(0, -1))
@@ -58,4 +61,5 @@ func _on_Area2D_area_entered(area):
 
 func _on_AnimatedSprite_animation_finished():
 	hurt = false
+
 
