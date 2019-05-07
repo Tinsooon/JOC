@@ -42,13 +42,6 @@ margin_right = 69.0
 margin_bottom = 44.0
 text = "Exit"
 
-[node name="Return" type="Button" parent="Control/Buttons/VBoxContainer"]
-pause_mode = 2
-margin_top = 48.0
-margin_right = 69.0
-margin_bottom = 68.0
-text = "Return"
-
 [node name="Pause" type="TextureButton" parent="Control"]
 pause_mode = 2
 margin_right = 50.0
@@ -58,5 +51,4 @@ script = ExtResource( 3 )
 
 [connection signal="pressed" from="Control/Buttons/VBoxContainer/Continue" to="Control" method="_on_Continue_pressed"]
 [connection signal="pressed" from="Control/Buttons/VBoxContainer/Exit" to="Control" method="_on_Exit_pressed"]
-[connection signal="pressed" from="Control/Buttons/VBoxContainer/Return" to="Control" method="_on_Return_pressed"]
 [connection signal="pressed" from="Control/Pause" to="Control" method="_on_Pause_pressed"]
