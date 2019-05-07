@@ -1,14 +1,15 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Menú principal/Control.gd" type="Script" id=1]
 [ext_resource path="res://Personatges+tot/cielo_azul.jpg" type="Texture" id=2]
 [ext_resource path="res://Menú principal/PNG/yellow_button00.png" type="Texture" id=3]
-[ext_resource path="res://Menú principal/Font/kenvector_future.ttf" type="DynamicFontData" id=4]
-[ext_resource path="res://Menú principal/Exit.gd" type="Script" id=5]
+[ext_resource path="res://Menú principal/PNG/yellow_button13.png" type="Texture" id=4]
+[ext_resource path="res://Menú principal/Font/kenvector_future.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Menú principal/Exit.gd" type="Script" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 10
-font_data = ExtResource( 4 )
+font_data = ExtResource( 5 )
 
 [node name="Node" type="Node"]
 
@@ -42,6 +43,7 @@ editor/display_folded = true
 margin_right = 190.0
 margin_bottom = 49.0
 texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
 
 [node name="Label" type="Label" parent="Control/VBoxContainer/Play"]
 margin_left = 50.0
@@ -53,10 +55,12 @@ custom_fonts/font = SubResource( 1 )
 text = "Play"
 
 [node name="Tutorial" type="TextureButton" parent="Control/VBoxContainer"]
+editor/display_folded = true
 margin_top = 53.0
 margin_right = 190.0
 margin_bottom = 102.0
 texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
 
 [node name="Label" type="Label" parent="Control/VBoxContainer/Tutorial"]
 margin_left = 20.0
@@ -73,7 +77,8 @@ margin_top = 106.0
 margin_right = 190.0
 margin_bottom = 155.0
 texture_normal = ExtResource( 3 )
-script = ExtResource( 5 )
+texture_pressed = ExtResource( 4 )
+script = ExtResource( 6 )
 
 [node name="Label" type="Label" parent="Control/VBoxContainer/Exit"]
 margin_left = 60.0
