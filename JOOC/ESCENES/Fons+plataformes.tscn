@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://ESCENES/Fons+plataformes.gd" type="Script" id=1]
 [ext_resource path="res://Sons/Canciones del Pou.wav" type="AudioStream" id=2]
@@ -11,12 +11,11 @@
 [ext_resource path="res://bloques de tiles/TILES DEFINITIUS/Tiles/tile_0028.png" type="Texture" id=9]
 [ext_resource path="res://bloques de tiles/TILES DEFINITIUS/Tiles/tile_0180.png" type="Texture" id=10]
 [ext_resource path="res://ESCENES/TileMap.gd" type="Script" id=11]
-[ext_resource path="res://ESCENES/pastanagues/escena pastanagues.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Personatges+tot/PersonatgePrincipal.tscn" type="PackedScene" id=13]
-[ext_resource path="res://ESCENES/trampoli.tscn" type="PackedScene" id=14]
-[ext_resource path="res://punxes.tscn" type="PackedScene" id=15]
-[ext_resource path="res://ESCENES/cactus.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Escenes/Enemic_punxa.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Personatges+tot/PersonatgePrincipal.tscn" type="PackedScene" id=12]
+[ext_resource path="res://ESCENES/trampoli.tscn" type="PackedScene" id=13]
+[ext_resource path="res://punxes.tscn" type="PackedScene" id=14]
+[ext_resource path="res://ESCENES/cactus.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Escenes/Enemic_punxa.tscn" type="PackedScene" id=16]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 0, 0, 0, 0 )
@@ -112,30 +111,27 @@ script = ExtResource( 11 )
 
 [node name="sprites" type="Node2D" parent="."]
 
-[node name="Pastanaga" parent="sprites" instance=ExtResource( 12 )]
-position = Vector2( 498.876, 247.781 )
-
-[node name="conill" parent="sprites" instance=ExtResource( 13 )]
+[node name="conill" parent="sprites" instance=ExtResource( 12 )]
 position = Vector2( 943.736, 4157.99 )
 
-[node name="trampoli" parent="sprites" instance=ExtResource( 14 )]
-position = Vector2( 873.134, -160.172 )
+[node name="trampoli" parent="sprites" instance=ExtResource( 13 )]
+position = Vector2( 739.789, 1962.42 )
 
 [node name="enemics xugos2" type="Node2D" parent="sprites"]
 
-[node name="punxes" parent="sprites/enemics xugos2" instance=ExtResource( 15 )]
+[node name="punxes" parent="sprites/enemics xugos2" instance=ExtResource( 14 )]
 position = Vector2( 274.181, -388.005 )
 
-[node name="mes punxes" parent="sprites/enemics xugos2" instance=ExtResource( 15 )]
+[node name="mes punxes" parent="sprites/enemics xugos2" instance=ExtResource( 14 )]
 position = Vector2( 785.883, 2457.86 )
 
-[node name="mes mes punxes" parent="sprites/enemics xugos2" instance=ExtResource( 15 )]
+[node name="mes mes punxes" parent="sprites/enemics xugos2" instance=ExtResource( 14 )]
 position = Vector2( 196.825, 3572.97 )
 
-[node name="cactus" parent="sprites/enemics xugos2" instance=ExtResource( 16 )]
+[node name="cactus" parent="sprites/enemics xugos2" instance=ExtResource( 15 )]
 position = Vector2( 814.812, 501.225 )
 
-[node name="enemic" parent="sprites" instance=ExtResource( 17 )]
+[node name="enemic" parent="sprites" instance=ExtResource( 16 )]
 position = Vector2( 427.127, 4168.29 )
 
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]

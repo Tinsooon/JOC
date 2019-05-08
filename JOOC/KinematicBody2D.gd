@@ -61,7 +61,8 @@ func _on_trampoli_body_entered(body):
 func _on_Area2D_area_entered(area):
 	hit(area.damage)
 	print('au')
-
+	
+	
 func _on_AnimatedSprite_animation_finished():
 	hurt = false
 
