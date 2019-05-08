@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://ESCENES/Fons+plataformes.gd" type="Script" id=1]
 [ext_resource path="res://Sons/Canciones del Pou.wav" type="AudioStream" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://punxes.tscn" type="PackedScene" id=14]
 [ext_resource path="res://ESCENES/cactus.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Escenes/Enemic_punxa.tscn" type="PackedScene" id=16]
+[ext_resource path="res://ESCENES/pastanagues/escena pastanagues.tscn" type="PackedScene" id=17]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 0, 0, 0, 0 )
@@ -78,10 +79,9 @@ margin_right = 392.035
 margin_bottom = -313.131
 
 [node name="paisatge" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="sotaterra" type="Sprite" parent="paisatge"]
-position = Vector2( 573.433, 1618.85 )
+position = Vector2( 565.769, 1649.51 )
 scale = Vector2( 1.23516, 1 )
 texture = ExtResource( 6 )
 region_enabled = true
@@ -133,5 +133,8 @@ position = Vector2( 814.812, 501.225 )
 
 [node name="enemic" parent="sprites" instance=ExtResource( 16 )]
 position = Vector2( 427.127, 4168.29 )
+
+[node name="Pastanaga" parent="sprites" instance=ExtResource( 17 )]
+position = Vector2( 712.416, 3776.62 )
 
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]

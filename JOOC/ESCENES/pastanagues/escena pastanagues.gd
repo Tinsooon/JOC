@@ -1,7 +1,7 @@
 extends Area2D
 
 var pastanaga = load("res://ESCENES/pastanagues/escena pastanagues.tscn")
-
+var damage = 0
 func ready(): 
 	pass
 
