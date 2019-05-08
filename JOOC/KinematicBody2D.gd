@@ -30,6 +30,9 @@ func mou():
 		$AudioStreamPlayer.play()
 	if position.y >= 4311.6:
 		position = posicio
+		hit(3)
+		get_tree().change_scene("res://Game over/Game over.tscn")
+		
 		
 	else:
 		velocitat += gravetat
@@ -47,7 +50,7 @@ func hit(damage):
 	hurt = true
 	if vida <= 0:
 		mor()
-		
+		get_tree().change_scene("res://Game over/Game over.tscn")
 func mor():
 	position = posicio
 
