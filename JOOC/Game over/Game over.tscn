@@ -6,7 +6,8 @@
 [node name="Node" type="Node"]
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 398.068, 334.222 )
+position = Vector2( 399.73, 348.626 )
+scale = Vector2( 1.28851, 1.12036 )
 texture = ExtResource( 1 )
 
 [node name="Control" type="Control" parent="."]
@@ -15,16 +16,16 @@ margin_bottom = 40.0
 script = ExtResource( 2 )
 
 [node name="Yes" type="TextureButton" parent="Control"]
-margin_left = 313.0
-margin_top = 489.0
-margin_right = 385.0
-margin_bottom = 536.0
+margin_left = 304.136
+margin_top = 526.673
+margin_right = 376.136
+margin_bottom = 573.673
 
 [node name="No" type="TextureButton" parent="Control"]
-margin_left = 433.0
-margin_top = 490.0
-margin_right = 497.0
-margin_bottom = 534.0
+margin_left = 452.945
+margin_top = 528.781
+margin_right = 516.945
+margin_bottom = 572.781
 
 [connection signal="pressed" from="Control/Yes" to="Control" method="_on_Yes_pressed"]
 [connection signal="pressed" from="Control/No" to="Control" method="_on_No_pressed"]
