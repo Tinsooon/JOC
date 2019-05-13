@@ -2,21 +2,21 @@
 
 [ext_resource path="res://ESCENES/Fons+plataformes.gd" type="Script" id=1]
 [ext_resource path="res://Sons/Canciones del Pou.wav" type="AudioStream" id=2]
-[ext_resource path="res://ESCENES/AudioStreamPlayer.gd" type="Script" id=3]
-[ext_resource path="res://Menú pausa/Pause.tscn" type="PackedScene" id=4]
-[ext_resource path="res://ESCENES/BarraEnergia.tscn" type="PackedScene" id=5]
-[ext_resource path="res://TileMaps/BAJO TIERRA.png" type="Texture" id=6]
-[ext_resource path="res://TileMaps/CASITA.png" type="Texture" id=7]
-[ext_resource path="res://TileMaps/NUBESITAS.png" type="Texture" id=8]
-[ext_resource path="res://bloques de tiles/TILES DEFINITIUS/Tiles/tile_0180.png" type="Texture" id=9]
-[ext_resource path="res://rpgTile039.png" type="Texture" id=10]
-[ext_resource path="res://ESCENES/TileMap.gd" type="Script" id=11]
-[ext_resource path="res://Personatges+tot/PersonatgePrincipal.tscn" type="PackedScene" id=12]
-[ext_resource path="res://ESCENES/trampoli.tscn" type="PackedScene" id=13]
-[ext_resource path="res://punxes.tscn" type="PackedScene" id=14]
-[ext_resource path="res://ESCENES/cactus.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Escenes/Enemic_punxa.tscn" type="PackedScene" id=16]
-[ext_resource path="res://ESCENES/pastanagues/escena pastanagues.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Menú pausa/Pause.tscn" type="PackedScene" id=3]
+[ext_resource path="res://ESCENES/BarraEnergia.tscn" type="PackedScene" id=4]
+[ext_resource path="res://TileMaps/BAJO TIERRA.png" type="Texture" id=5]
+[ext_resource path="res://TileMaps/CASITA.png" type="Texture" id=6]
+[ext_resource path="res://TileMaps/NUBESITAS.png" type="Texture" id=7]
+[ext_resource path="res://bloques de tiles/TILES DEFINITIUS/Tiles/tile_0180.png" type="Texture" id=8]
+[ext_resource path="res://rpgTile039.png" type="Texture" id=9]
+[ext_resource path="res://ESCENES/TileMap.gd" type="Script" id=10]
+[ext_resource path="res://Personatges+tot/PersonatgePrincipal.tscn" type="PackedScene" id=11]
+[ext_resource path="res://ESCENES/trampoli.tscn" type="PackedScene" id=12]
+[ext_resource path="res://punxes.tscn" type="PackedScene" id=13]
+[ext_resource path="res://ESCENES/cactus.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Escenes/Enemic_punxa.tscn" type="PackedScene" id=15]
+[ext_resource path="res://ESCENES/pastanagues/escena pastanagues.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Escenes/Camera2D.gd" type="Script" id=17]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 43, 0, 43, 38, 0, 38 )
@@ -26,7 +26,7 @@ points = PoolVector2Array( 0, 0, 45, 0, 45, 36, 0, 36 )
 
 [sub_resource type="TileSet" id=3]
 9/name = "tile_0180.png 9"
-9/texture = ExtResource( 9 )
+9/texture = ExtResource( 8 )
 9/tex_offset = Vector2( 0, 0 )
 9/modulate = Color( 1, 1, 1, 1 )
 9/region = Rect2( 0, 0, 45, 36 )
@@ -42,7 +42,7 @@ points = PoolVector2Array( 0, 0, 45, 0, 45, 36, 0, 36 )
 } ]
 9/z_index = 0
 12/name = "tile_0180.png 12"
-12/texture = ExtResource( 9 )
+12/texture = ExtResource( 8 )
 12/tex_offset = Vector2( 0, 0 )
 12/modulate = Color( 1, 1, 1, 1 )
 12/region = Rect2( 0, 0, 32, 32 )
@@ -52,7 +52,7 @@ points = PoolVector2Array( 0, 0, 45, 0, 45, 36, 0, 36 )
 12/shapes = [  ]
 12/z_index = 0
 13/name = "rpgTile039.png 13"
-13/texture = ExtResource( 10 )
+13/texture = ExtResource( 9 )
 13/tex_offset = Vector2( 0, 0 )
 13/modulate = Color( 1, 1, 1, 1 )
 13/region = Rect2( 2, 5, 43, 38 )
@@ -74,15 +74,16 @@ script = ExtResource( 1 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
-script = ExtResource( 3 )
 
 [node name="pause" type="CanvasLayer" parent="."]
+editor/display_folded = true
 
-[node name="Node" parent="pause" instance=ExtResource( 4 )]
+[node name="Node" parent="pause" instance=ExtResource( 3 )]
 
 [node name="cors + energia" type="CanvasLayer" parent="."]
+editor/display_folded = true
 
-[node name="Control" parent="cors + energia" instance=ExtResource( 5 )]
+[node name="Control" parent="cors + energia" instance=ExtResource( 4 )]
 margin_left = 392.035
 margin_top = -281.131
 margin_right = 392.035
@@ -93,21 +94,21 @@ margin_bottom = -313.131
 [node name="sotaterra" type="Sprite" parent="paisatge"]
 position = Vector2( 565.769, 1649.51 )
 scale = Vector2( 1.23516, 1 )
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 8, -1464, 2388, 5312 )
 
 [node name="terra" type="Sprite" parent="paisatge"]
 position = Vector2( 569.939, -2034.25 )
 scale = Vector2( 1.1821, 1.98012 )
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 region_enabled = true
 region_rect = Rect2( -12, -8, 2480, 1032 )
 
 [node name="cel" type="Sprite" parent="paisatge"]
 position = Vector2( 570.802, -6589.12 )
 scale = Vector2( 0.78046, 0.999258 )
-texture = ExtResource( 8 )
+texture = ExtResource( 7 )
 region_enabled = true
 region_rect = Rect2( 4, -2244, 3728, 7111.06 )
 
@@ -117,34 +118,38 @@ tile_set = SubResource( 3 )
 cell_size = Vector2( 36, 36 )
 format = 1
 tile_data = PoolIntArray( -4653034, 13, 0, -4653033, 13, 0, -4653032, 13, 0, -4653031, 13, 0, -4653030, 13, 0, -4653029, 13, 0, -4653028, 13, 0, -4653027, 13, 0, -4259829, 13, 0, -4259828, 13, 0, -4259827, 13, 0, -4259826, 13, 0, -4259825, 13, 0, -4259824, 13, 0, -4128746, 13, 0, -4128745, 13, 0, -4128744, 13, 0, -4128743, 13, 0, -4128742, 13, 0, -4128741, 13, 0, -3866594, 13, 0, -3866593, 13, 0, -3866592, 13, 0, -3866591, 13, 0, -3866590, 13, 0, -3866589, 13, 0, -3604461, 13, 0, -3604460, 13, 0, -3604459, 13, 0, -3604458, 13, 0, -3604457, 13, 0, -3604456, 13, 0, -3604455, 13, 0, -3604454, 13, 0, -3211255, 13, 0, -3211254, 13, 0, -3211253, 13, 0, -3211252, 13, 0, -3211251, 13, 0, -3080171, 13, 0, -3080170, 13, 0, -3080169, 13, 0, -3080168, 13, 0, -3080167, 13, 0, -3080166, 13, 0, -3080165, 13, 0, -3080164, 13, 0, -2686965, 13, 0, -2686964, 13, 0, -2686963, 13, 0, -2686962, 13, 0, -2686961, 13, 0, -2490346, 13, 0, -2490345, 13, 0, -2490344, 13, 0, -2490343, 13, 0, -2490342, 13, 0, -2490341, 13, 0, -2490340, 13, 0, -2490339, 13, 0, -2490338, 13, 0, -2097146, 9, 0, -2097145, 9, 0, -2097144, 9, 0, -2097143, 9, 0, -2097142, 9, 0, -2097141, 9, 0, -2097140, 9, 0, -1769448, 9, 0, -1769447, 9, 0, -1769446, 9, 0, -1769445, 9, 0, -1769444, 9, 0, -1769443, 9, 0, -1769442, 9, 0, -1769441, 9, 0, -1769440, 9, 0, -1769439, 9, 0, -1769438, 9, 0, -1769437, 9, 0, -1376249, 9, 0, -1376248, 9, 0, -1376247, 9, 0, -1376246, 9, 0, -1376245, 9, 0, -1376244, 9, 0, -1376243, 9, 0, -1376242, 9, 0, -983021, 9, 0, -983020, 9, 0, -983019, 9, 0, -983018, 9, 0, -983017, 9, 0, -983016, 9, 0, -983015, 9, 0, -983014, 9, 0, -983013, 9, 0, -983012, 9, 0, -983011, 9, 0, -983010, 9, 0, -983009, 9, 0, -983008, 9, 0, -655354, 9, 0, -655353, 9, 0, -655352, 9, 0, -655351, 9, 0, -655350, 9, 0, -655349, 9, 0, -655348, 9, 0, -655347, 9, 0, -196592, 9, 0, -196591, 9, 0, -196590, 9, 0, -196589, 9, 0, -196588, 9, 0, -196587, 9, 0, -196586, 9, 0, -196585, 9, 0, -196584, 9, 0, -196583, 9, 0, 65547, 9, 0, 65548, 9, 0, 65549, 9, 0, 65550, 9, 0, 327685, 9, 0, 327686, 9, 0, 524299, 9, 0, 524300, 9, 0, 524301, 9, 0, 524302, 9, 0, 524303, 9, 0, 524304, 9, 0, 983058, 9, 0, 983059, 9, 0, 983060, 9, 0, 983061, 9, 0, 983062, 9, 0, 983063, 9, 0, 1441803, 9, 0, 1441804, 9, 0, 1441805, 9, 0, 1441806, 9, 0, 1441807, 9, 0, 1441808, 9, 0, 1638422, 9, 0, 1638423, 9, 0, 1638424, 9, 0, 1638425, 9, 0, 1638426, 9, 0, 1835018, 9, 0, 1835019, 9, 0, 1835020, 9, 0, 1835021, 9, 0, 1835022, 9, 0, 1835023, 9, 0, 1835024, 9, 0, 2293766, 9, 0, 2293767, 9, 0, 2293768, 9, 0, 2293769, 9, 0, 2359310, 9, 0, 2359311, 9, 0, 2490389, 9, 0, 2490390, 9, 0, 2490391, 9, 0, 2490392, 9, 0, 2490393, 9, 0, 2752525, 9, 0, 2752526, 9, 0, 2752527, 9, 0, 2752528, 9, 0, 2752529, 9, 0, 2752530, 9, 0, 3211271, 9, 0, 3211272, 9, 0, 3211273, 9, 0, 3211274, 9, 0, 3211275, 9, 0, 3211276, 9, 0, 3670031, 9, 0, 3670032, 9, 0, 3670033, 9, 0, 3670034, 9, 0, 3670035, 9, 0, 3670036, 9, 0, 3670037, 9, 0, 4128773, 9, 0, 4128774, 9, 0, 4128775, 9, 0, 4128776, 9, 0, 4128777, 9, 0, 4128778, 9, 0, 4128779, 9, 0, 4128780, 9, 0, 4521999, 9, 0, 4522000, 9, 0, 4522001, 9, 0, 4522002, 9, 0, 4522003, 9, 0, 4522004, 9, 0, 4522005, 9, 0, 4522006, 9, 0, 4980743, 9, 0, 4980744, 9, 0, 4980745, 9, 0, 4980746, 9, 0, 4980747, 9, 0, 4980748, 9, 0, 5308432, 9, 0, 5308433, 9, 0, 5308434, 9, 0, 5308435, 9, 0, 5308436, 9, 0, 5308437, 9, 0, 5308438, 9, 0, 5701639, 9, 0, 5701640, 9, 0, 5701641, 9, 0, 5701642, 9, 0, 5701643, 9, 0, 5701644, 9, 0, 5701645, 9, 0, 6160400, 9, 0, 6160401, 9, 0, 6160402, 9, 0, 6160403, 9, 0, 6160404, 9, 0, 6160405, 9, 0, 6160406, 9, 0, 6160407, 9, 0, 6553604, 9, 0, 6553605, 9, 0, 6553606, 9, 0, 6553607, 9, 0, 6553608, 9, 0, 6553609, 9, 0, 6553610, 9, 0, 6553611, 9, 0, 6946831, 9, 0, 6946832, 9, 0, 6946833, 9, 0, 6946834, 9, 0, 6946835, 9, 0, 6946836, 9, 0, 6946837, 9, 0, 6946838, 9, 0, 6946839, 9, 0, 7143451, 13, 0, 7274494, 13, 0, 7208987, 13, 0, 7340030, 13, 0, 7274523, 13, 0, 7340037, 9, 0, 7340038, 9, 0, 7340039, 9, 0, 7340040, 9, 0, 7340041, 9, 0, 7340042, 9, 0, 7340043, 9, 0, 7340059, 13, 0, 7471102, 13, 0, 7405595, 13, 0, 7667710, 13, 0, 7602203, 13, 0, 7667739, 13, 0, 7733252, 9, 0, 7733253, 9, 0, 7733254, 9, 0, 7733255, 9, 0, 7733256, 9, 0, 7733257, 9, 0, 7733258, 9, 0, 7733259, 9, 0, 7733260, 9, 0, 7733261, 9, 0, 7733262, 9, 0, 7733263, 9, 0, 7733264, 9, 0, 7733265, 9, 0, 7733266, 9, 0, 7733267, 9, 0, 7733268, 9, 0, 7733269, 9, 0, 7733270, 9, 0, 7733271, 9, 0, 7733272, 9, 0, 7733273, 9, 0, 7733274, 9, 0, 7733275, 9, 0, 7798788, 9, 0, 7798789, 9, 0, 7798790, 9, 0, 7798791, 9, 0, 7798792, 9, 0, 7798793, 9, 0, 7798794, 9, 0, 7798795, 9, 0, 7798796, 9, 0, 7798797, 9, 0, 7798798, 9, 0, 7798799, 9, 0, 7798800, 9, 0, 7798801, 9, 0, 7798802, 9, 0, 7798803, 9, 0, 7798804, 9, 0, 7798805, 9, 0, 7798806, 9, 0, 7798807, 9, 0, 7798808, 9, 0, 7798809, 9, 0, 7798810, 9, 0, 7798811, 9, 0 )
-script = ExtResource( 11 )
+script = ExtResource( 10 )
 
 [node name="sprites" type="Node2D" parent="."]
 
-[node name="conill" parent="sprites" instance=ExtResource( 12 )]
+[node name="conill" parent="sprites" instance=ExtResource( 11 )]
 position = Vector2( 943.736, 4157.99 )
 
-[node name="trampoli" parent="sprites" instance=ExtResource( 13 )]
+[node name="trampoli" parent="sprites" instance=ExtResource( 12 )]
 position = Vector2( 739.789, 1962.42 )
 
 [node name="enemics xugos2" type="Node2D" parent="sprites"]
 
-[node name="punxes" parent="sprites/enemics xugos2" instance=ExtResource( 14 )]
+[node name="punxes" parent="sprites/enemics xugos2" instance=ExtResource( 13 )]
 position = Vector2( 274.181, -388.005 )
 
-[node name="mes punxes" parent="sprites/enemics xugos2" instance=ExtResource( 14 )]
+[node name="mes punxes" parent="sprites/enemics xugos2" instance=ExtResource( 13 )]
 position = Vector2( 785.883, 2457.86 )
 
-[node name="mes mes punxes" parent="sprites/enemics xugos2" instance=ExtResource( 14 )]
+[node name="mes mes punxes" parent="sprites/enemics xugos2" instance=ExtResource( 13 )]
 position = Vector2( 196.825, 3572.97 )
 
-[node name="cactus" parent="sprites/enemics xugos2" instance=ExtResource( 15 )]
+[node name="cactus" parent="sprites/enemics xugos2" instance=ExtResource( 14 )]
 position = Vector2( 814.812, 501.225 )
 
-[node name="enemic" parent="sprites" instance=ExtResource( 16 )]
+[node name="enemic" parent="sprites" instance=ExtResource( 15 )]
 position = Vector2( 427.127, 4168.29 )
 
-[node name="Pastanaga" parent="sprites" instance=ExtResource( 17 )]
+[node name="Pastanaga" parent="sprites" instance=ExtResource( 16 )]
 position = Vector2( 712.416, 3776.62 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2( 571.88, 4133.03 )
+script = ExtResource( 17 )
 
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]
