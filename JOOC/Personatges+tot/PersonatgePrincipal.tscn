@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
 [ext_resource path="res://Personatges+tot/PNG/Players/bunny2_hurt.png" type="Texture" id=2]
 [ext_resource path="res://Personatges+tot/PNG/Players/bunny2_stand.png" type="Texture" id=3]
 [ext_resource path="res://Personatges+tot/PNG/Players/bunny2_jump.png" type="Texture" id=4]
 [ext_resource path="res://Sons/Jump2.wav" type="AudioStream" id=5]
+[ext_resource path="res://Particles2D/PNG/star_06.png" type="Texture" id=6]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -27,20 +28,24 @@ radius = 73.9874
 
 [sub_resource type="ParticlesMaterial" id=4]
 flag_disable_z = true
-gravity = Vector3( 0, 98, 0 )
-angular_velocity = -40.0
+gravity = Vector3( 0, 7000, 0 )
+initial_velocity = 1000.0
+angular_velocity = 1.18379e-037
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 
-[sub_resource type="AnimatedTexture" id=5]
-frames = 3
-fps = 169.6
-frame_1/delay_sec = 0.0
-frame_2/delay_sec = 0.0
+[sub_resource type="ParticlesMaterial" id=5]
+flag_disable_z = true
+gravity = Vector3( 0, 98, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
 
 [node name="conill" type="KinematicBody2D"]
 position = Vector2( 91, -9 )
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( -91, 10 )
@@ -75,12 +80,20 @@ position = Vector2( -91, 9 )
 position = Vector2( 0, -1.75806 )
 shape = SubResource( 3 )
 
-[node name="Particles2D" type="Particles2D" parent="."]
-amount = 10
-speed_scale = 2.0
+[node name="Particles 1" type="Particles2D" parent="."]
+visible = false
+position = Vector2( -108.862, 362.227 )
+scale = Vector2( 0.126501, 0.11029 )
 local_coords = false
 process_material = SubResource( 4 )
-texture = SubResource( 5 )
+texture = ExtResource( 6 )
+
+[node name="Particles prova" type="Particles2D" parent="."]
+position = Vector2( -91.0001, 78.0001 )
+lifetime = 2.0
+preprocess = 1.0
+local_coords = false
+process_material = SubResource( 5 )
 
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
 [connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
