@@ -1,5 +1,7 @@
 extends Node2D
 
+var vida = 3
+
 func _ready():
 	$AudioStreamPlayer.play()
 
