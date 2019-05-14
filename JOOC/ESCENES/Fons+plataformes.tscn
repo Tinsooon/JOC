@@ -4,7 +4,7 @@
 [ext_resource path="res://Sons/Canciones del Pou.wav" type="AudioStream" id=2]
 [ext_resource path="res://ESCENES/AudioStreamPlayer.gd" type="Script" id=3]
 [ext_resource path="res://Menú pausa/Pause.tscn" type="PackedScene" id=4]
-[ext_resource path="res://ESCENES/BarraEnergia.tscn" type="PackedScene" id=5]
+[ext_resource path="res://ESCENES/cors 2.tscn" type="PackedScene" id=5]
 [ext_resource path="res://TileMaps/BAJO TIERRA.png" type="Texture" id=6]
 [ext_resource path="res://TileMaps/CASITA.png" type="Texture" id=7]
 [ext_resource path="res://TileMaps/NUBESITAS.png" type="Texture" id=8]
@@ -80,18 +80,12 @@ script = ExtResource( 3 )
 
 [node name="Node" parent="pause" instance=ExtResource( 4 )]
 
-[node name="cors + energia" type="CanvasLayer" parent="."]
-
-[node name="Control" parent="cors + energia" instance=ExtResource( 5 )]
-margin_left = 392.035
-margin_top = -281.131
-margin_right = 392.035
-margin_bottom = -313.131
+[node name="Node2" parent="pause" instance=ExtResource( 5 )]
 
 [node name="paisatge" type="Node2D" parent="."]
 
 [node name="sotaterra" type="Sprite" parent="paisatge"]
-position = Vector2( 565.769, 1649.51 )
+position = Vector2( 557.873, 1628.1 )
 scale = Vector2( 1.23516, 1 )
 texture = ExtResource( 6 )
 region_enabled = true

@@ -3,9 +3,9 @@ extends CanvasLayer
 onready var vida = get_tree().get_root().get_node('Node2D').vida
 
 func _ready():
-	pass
+	vida = 3
 	
-func _vides():
+func _vida():
 	
 	if vida == 3:
 		$vida.frame = 0
