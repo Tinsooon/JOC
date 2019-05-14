@@ -26,11 +26,9 @@ frames = SubResource( 1 )
 position = Vector2( 767.447, 30.1631 )
 scale = Vector2( 0.212096, 0.20695 )
 frames = SubResource( 1 )
-frame = 1
 
 [node name="vida3" type="AnimatedSprite" parent="CanvasLayer"]
 position = Vector2( 658.995, 28.3404 )
 scale = Vector2( 0.212096, 0.20695 )
 frames = SubResource( 1 )
-frame = 1
 

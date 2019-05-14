@@ -43,9 +43,12 @@ func anima():
 		$AnimatedSprite.play('Jump')
 	#if _on_Area2D_area_entered:
 		#$AnimatedSprite.play('hurt')
+func actualitza_vida(damage):
+	vida -= damage
+	get_tree().get_root().get_node('Node2D').vida = vida
 
 func hit(damage):
-	vida -= damage
+	actualitza_vida(damage)
 	$AnimatedSprite.play('hurt')
 	hurt = true
 	if vida <= 0:
