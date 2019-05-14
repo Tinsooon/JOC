@@ -1,11 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Menú principal/Control.gd" type="Script" id=1]
 [ext_resource path="res://Personatges+tot/cielo_azul.jpg" type="Texture" id=2]
 [ext_resource path="res://Menú principal/PNG/yellow_button00.png" type="Texture" id=3]
 [ext_resource path="res://Menú principal/PNG/yellow_button13.png" type="Texture" id=4]
 [ext_resource path="res://Menú principal/Font/kenvector_future.ttf" type="DynamicFontData" id=5]
-[ext_resource path="res://Menú principal/Exit.gd" type="Script" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 10
@@ -78,7 +77,6 @@ margin_right = 190.0
 margin_bottom = 155.0
 texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 4 )
-script = ExtResource( 6 )
 
 [node name="Label" type="Label" parent="Control/VBoxContainer/Exit"]
 margin_left = 60.0
