@@ -142,3 +142,4 @@ position = Vector2( 427.127, 4168.29 )
 position = Vector2( 712.416, 3776.62 )
 
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]
+[connection signal="canvia_vida" from="sprites/conill" to="pause/Node2" method="_on_conill_canvia_vida"]
