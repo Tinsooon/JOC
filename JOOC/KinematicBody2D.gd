@@ -7,7 +7,6 @@ onready var vida = get_tree().get_root().get_node('Node2D').vida
 var hurt = false
 var posicio = Vector2(870.571,4136.038)
 var velocitat_trampoli = Vector2(0, 1000)
-signal canvia_vida
 # Called when the node enters the scene tree for the first time.
 
 func _ready():
@@ -47,7 +46,6 @@ func anima():
 func actualitza_vida(damage):
 	vida -= damage
 	get_tree().get_root().get_node('Node2D').vida = vida
-	emit_signal("canvia_vida")
 
 func hit(damage):
 	actualitza_vida(damage)
@@ -58,7 +56,6 @@ func hit(damage):
 		get_tree().change_scene("res://Game over/Game over.tscn")
 func mor():
 	position = posicio
-	vida = 3
 
 		
 func _on_Area2D_area_entered(area):

@@ -3,11 +3,10 @@ extends CanvasLayer
 onready var vida = get_tree().get_root().get_node('Node2D').vida
 
 func _ready():
-	pass
+	vida = 3
 	
-
-func _on_conill_canvia_vida():
-	vida -=1
+func _vida():
+	
 	if vida == 3:
 		$vida.frame = 0
 		$vida2.frame = 0
@@ -17,10 +16,14 @@ func _on_conill_canvia_vida():
 		$vida.frame = 0
 		$vida2.frame = 0
 		$vida3.frame = 1
-		
 	
 	elif vida == 1:
 		$vida.frame = 0
 		$vida2.frame = 1
 		$vida3.frame = 1
+	
+		
+		
+		
+		
 		

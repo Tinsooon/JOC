@@ -1,4 +1,4 @@
-﻿[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://ESCENES/Fons+plataformes.gd" type="Script" id=1]
 [ext_resource path="res://Sons/Canciones del Pou.wav" type="AudioStream" id=2]
@@ -147,11 +147,7 @@ position = Vector2( 427.127, 4168.29 )
 position = Vector2( 712.416, 3776.62 )
 
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]
-
 [connection signal="area_entered" from="sprites/trampoli" to="sprites/conill" method="_on_trampoli_area_entered"]
 [connection signal="body_entered" from="sprites/trampoli" to="sprites/conill" method="_on_trampoli_body_entered"]
 [connection signal="area_entered" from="sprites/trampoli3" to="sprites/conill" method="_on_trampoli_area_entered"]
 [connection signal="body_entered" from="sprites/trampoli3" to="sprites/conill" method="_on_trampoli_body_entered"]
-
-[connection signal="canvia_vida" from="sprites/conill" to="pause/Node2" method="_on_conill_canvia_vida"]
-
