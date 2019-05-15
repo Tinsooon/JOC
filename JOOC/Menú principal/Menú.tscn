@@ -38,7 +38,6 @@ margin_bottom = 77.5
 rect_scale = Vector2( 0.467993, 0.719082 )
 
 [node name="Play" type="TextureButton" parent="Control/VBoxContainer"]
-editor/display_folded = true
 margin_right = 190.0
 margin_bottom = 49.0
 texture_normal = ExtResource( 3 )
