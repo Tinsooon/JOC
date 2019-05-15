@@ -60,7 +60,7 @@ func mor():
 
 		
 func _on_Area2D_area_entered(area):
-	if area.name != 'trampoli':
+	if not area.name.begins_with('trampoli'):
 		hit(area.damage)
 		print('au')
 	
