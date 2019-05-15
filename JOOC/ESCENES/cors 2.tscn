@@ -12,22 +12,20 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="Node" type="Node"]
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource( 1 )
 
-[node name="vida2" type="AnimatedSprite" parent="CanvasLayer"]
+[node name="vida2" type="AnimatedSprite" parent="."]
 position = Vector2( 711.854, 28.3404 )
 scale = Vector2( 0.212096, 0.20695 )
 frames = SubResource( 1 )
 
-[node name="vida" type="AnimatedSprite" parent="CanvasLayer"]
+[node name="vida" type="AnimatedSprite" parent="."]
 position = Vector2( 767.447, 30.1631 )
 scale = Vector2( 0.212096, 0.20695 )
 frames = SubResource( 1 )
 
-[node name="vida3" type="AnimatedSprite" parent="CanvasLayer"]
+[node name="vida3" type="AnimatedSprite" parent="."]
 position = Vector2( 658.995, 28.3404 )
 scale = Vector2( 0.212096, 0.20695 )
 frames = SubResource( 1 )
