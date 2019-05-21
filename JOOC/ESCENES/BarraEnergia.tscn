@@ -11,15 +11,15 @@ script = ExtResource( 1 )
 [node name="Control" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 58.9616
-margin_top = -14.5119
-margin_right = 58.9616
-margin_bottom = -14.5119
+margin_left = 59.0849
+margin_top = -14.3886
+margin_right = 59.0849
+margin_bottom = -14.3886
 rect_scale = Vector2( 0.3, 0.3 )
 script = ExtResource( 2 )
 
 [node name="BarraNegraHoritzontalDefinitiva" type="Sprite" parent="Control"]
-position = Vector2( 53.7782, 161.782 )
+position = Vector2( 52.5454, 161.371 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 3 )
 
@@ -29,6 +29,6 @@ margin_top = 142.0
 margin_right = 325.0
 margin_bottom = 270.0
 rect_scale = Vector2( 0.3, 0.3 )
-value = 80.0
+value = 50.0
 texture_progress = ExtResource( 4 )
 

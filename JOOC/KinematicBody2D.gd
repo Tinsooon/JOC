@@ -31,7 +31,7 @@ func mou():
 	if position.y >= 4311.6:
 		position = posicio
 		hit(3)
-		get_tree().change_scene("res://Game over/Game over.tscn")
+		get_tree().change_scene("res://Game over/Game over.tscn") 
 		
 		
 	else:
@@ -43,6 +43,7 @@ func anima():
 		$AnimatedSprite.play('Jump')
 	#if _on_Area2D_area_entered:
 		#$AnimatedSprite.play('hurt')
+		
 func actualitza_vida(damage):
 	vida -= damage
 	get_tree().get_root().get_node('Node2D').vida = vida
