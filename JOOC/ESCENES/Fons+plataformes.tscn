@@ -116,7 +116,7 @@ script = ExtResource( 11 )
 [node name="sprites" type="Node2D" parent="."]
 
 [node name="conill" parent="sprites" instance=ExtResource( 12 )]
-position = Vector2( 956.412, -2103.92 )
+position = Vector2( 875.226, 4147.09 )
 
 [node name="trampoli" parent="sprites" instance=ExtResource( 13 )]
 position = Vector2( 794.348, 3332.95 )
