@@ -1,6 +1,6 @@
 extends RichTextLabel
 
-var s = 2
+var s = 60
 
 func _ready():
 	pass

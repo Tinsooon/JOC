@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://ESCENES/Fons+plataformes.gd" type="Script" id=1]
 [ext_resource path="res://Sons/Canciones del Pou.wav" type="AudioStream" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://ESCENES/cactus.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Escenes/Enemic_punxa.tscn" type="PackedScene" id=16]
 [ext_resource path="res://ESCENES/pastanagues/escena pastanagues.tscn" type="PackedScene" id=17]
+[ext_resource path="res://ESCENES/temps.tscn" type="PackedScene" id=18]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 43, 0, 43, 38, 0, 38 )
@@ -77,12 +78,14 @@ stream = ExtResource( 2 )
 script = ExtResource( 3 )
 
 [node name="pause" type="CanvasLayer" parent="."]
+editor/display_folded = true
 
 [node name="Node" parent="pause" instance=ExtResource( 4 )]
 
 [node name="Node2" parent="pause" instance=ExtResource( 5 )]
 
 [node name="paisatge" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="sotaterra" type="Sprite" parent="paisatge"]
 position = Vector2( 581.396, 1643.45 )
@@ -117,6 +120,7 @@ script = ExtResource( 11 )
 
 [node name="conill" parent="sprites" instance=ExtResource( 12 )]
 position = Vector2( 875.226, 4147.09 )
+collision_mask = 28
 
 [node name="trampoli" parent="sprites" instance=ExtResource( 13 )]
 position = Vector2( 794.348, 3332.95 )
@@ -128,6 +132,7 @@ position = Vector2( 774.256, -156.319 )
 position = Vector2( 286.961, -2823.48 )
 
 [node name="enemics xugos2" type="Node2D" parent="sprites"]
+editor/display_folded = true
 
 [node name="punxes" parent="sprites/enemics xugos2" instance=ExtResource( 14 )]
 position = Vector2( 274.181, -388.005 )
@@ -148,6 +153,10 @@ position = Vector2( 427.127, 4168.29 )
 
 [node name="Pastanaga" parent="sprites" instance=ExtResource( 17 )]
 position = Vector2( 712.416, 3776.62 )
+monitorable = false
+collision_layer = 16
+
+[node name="RichTextLabel" parent="." instance=ExtResource( 18 )]
 
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]
 [connection signal="canvia_vida" from="sprites/conill" to="pause/Node2" method="_on_conill_canvia_vida"]

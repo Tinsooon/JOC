@@ -40,6 +40,7 @@ Enter={
 2d_physics/layer_2="Enemic"
 2d_physics/layer_3="Terra"
 2d_physics/layer_4="trampolí"
+2d_physics/layer_5="pastanaga"
 
 [rendering]
 
