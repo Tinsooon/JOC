@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://ESCENES/Fons+plataformes.gd" type="Script" id=1]
 [ext_resource path="res://Sons/Canciones del Pou.wav" type="AudioStream" id=2]
@@ -18,6 +18,7 @@
 [ext_resource path="res://Escenes/Enemic_punxa.tscn" type="PackedScene" id=16]
 [ext_resource path="res://ESCENES/pastanagues/escena pastanagues.tscn" type="PackedScene" id=17]
 [ext_resource path="res://ESCENES/temps.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Escenes/Camera2D.gd" type="Script" id=19]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 43, 0, 43, 38, 0, 38 )
@@ -119,7 +120,7 @@ script = ExtResource( 11 )
 [node name="sprites" type="Node2D" parent="."]
 
 [node name="conill" parent="sprites" instance=ExtResource( 12 )]
-position = Vector2( 875.226, 4147.09 )
+position = Vector2( 586.284, 4162.12 )
 collision_mask = 28
 
 [node name="trampoli" parent="sprites" instance=ExtResource( 13 )]
@@ -149,7 +150,7 @@ collision_layer = 2
 collision_mask = 13
 
 [node name="enemic" parent="sprites" instance=ExtResource( 16 )]
-position = Vector2( 427.127, 4168.29 )
+position = Vector2( 315.224, 4169.96 )
 
 [node name="Pastanaga" parent="sprites" instance=ExtResource( 17 )]
 position = Vector2( 712.416, 3776.62 )
@@ -157,6 +158,10 @@ monitorable = false
 collision_layer = 16
 
 [node name="RichTextLabel" parent="." instance=ExtResource( 18 )]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+script = ExtResource( 19 )
 
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]
 [connection signal="canvia_vida" from="sprites/conill" to="pause/Node2" method="_on_conill_canvia_vida"]

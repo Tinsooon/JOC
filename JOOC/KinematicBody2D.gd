@@ -5,7 +5,7 @@ var velocitat_maxima = 200
 var gravetat = Vector2(0,11)
 onready var vida = get_tree().get_root().get_node('Node2D').vida
 var hurt = false
-var posicio = Vector2(870.571,4136.038)
+var posicio = Vector2(550,4163.792)
 var velocitat_trampoli = Vector2(0, 1000)
 signal canvia_vida
 
