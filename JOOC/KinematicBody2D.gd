@@ -34,6 +34,7 @@ func mou():
 		get_tree().change_scene("res://Game over/Game over.tscn") 
 		
 		
+		
 	else:
 		velocitat += gravetat
 	velocitat = move_and_slide(velocitat, Vector2(0, -1))
