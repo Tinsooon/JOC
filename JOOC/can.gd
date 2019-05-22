@@ -1,9 +1,11 @@
 extends CanvasLayer
 
-var barra  = 100
-func _ready():
-	#set_fixed_process(true)
-	
 
-	#set_process_input(true)
+var energia = 100
+var s = 20
+
+func _ready():
 	pass
+
+
+

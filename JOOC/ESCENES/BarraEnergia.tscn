@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://can.gd" type="Script" id=1]
 [ext_resource path="res://ESCENES/BarraEnergia.gd" type="Script" id=2]
 [ext_resource path="res://Personatges+tot/BarraNegraHoritzontalDefinitiva.png" type="Texture" id=3]
 [ext_resource path="res://Personatges+tot/BarraTaronjaHoritzontalDefinitiva.png" type="Texture" id=4]
+[ext_resource path="res://ESCENES/temps.tscn" type="PackedScene" id=5]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource( 1 )
@@ -29,6 +30,8 @@ margin_top = 142.0
 margin_right = 325.0
 margin_bottom = 270.0
 rect_scale = Vector2( 0.3, 0.3 )
-value = 50.0
+value = 70.0
 texture_progress = ExtResource( 4 )
+
+[node name="RichTextLabel" parent="." instance=ExtResource( 5 )]
 
