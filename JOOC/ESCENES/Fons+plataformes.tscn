@@ -163,15 +163,14 @@ limit_right = 1030
 limit_bottom = 4300
 script = ExtResource( 19 )
 
-[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="Camera2D"]
-
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]
 [connection signal="canvia_vida" from="sprites/conill" to="pause/Node2" method="_on_conill_canvia_vida"]
+[connection signal="screen_exited" from="sprites/conill/AnimatedSprite/VisibilityNotifier2D" to="Camera2D" method="_on_VisibilityNotifier2D_screen_exited"]
 [connection signal="area_entered" from="sprites/trampoli" to="sprites/conill" method="_on_trampoli_area_entered"]
 [connection signal="body_entered" from="sprites/trampoli" to="sprites/conill" method="_on_trampoli_body_entered"]
 [connection signal="area_entered" from="sprites/trampoli2" to="sprites/conill" method="_on_trampoli_area_entered"]
 [connection signal="body_entered" from="sprites/trampoli2" to="sprites/conill" method="_on_trampoli_body_entered"]
 [connection signal="area_entered" from="sprites/trampoli3" to="sprites/conill" method="_on_trampoli_area_entered"]
 [connection signal="body_entered" from="sprites/trampoli3" to="sprites/conill" method="_on_trampoli_body_entered"]
-[connection signal="screen_exited" from="Camera2D/VisibilityNotifier2D" to="Camera2D" method="_on_VisibilityNotifier2D_screen_exited"]
-[connection signal="viewport_exited" from="Camera2D/VisibilityNotifier2D" to="Camera2D" method="_on_VisibilityNotifier2D_viewport_exited"]
+
+[editable path="sprites/conill"]
