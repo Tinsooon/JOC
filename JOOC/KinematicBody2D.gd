@@ -29,10 +29,6 @@ func mou():
 	if is_on_floor():
 		velocitat += salt
 		$AudioStreamPlayer.play()
-	if position.y >= 4311.6:
-		position = posicio
-		hit(3)
-		get_tree().change_scene("res://Game over/Game over.tscn") 
 		
 		
 		
@@ -57,11 +53,12 @@ func hit(damage):
 	hurt = true
 	if vida <= 0:
 		mor()
-		get_tree().change_scene("res://Game over/Game over.tscn")
+
 
 func mor():
+	$AnimatedSprite/VisibilityNotifier2D.free()
 	position = posicio
-
+	get_tree().change_scene("res://Game over/Game over.tscn")
 		
 func _on_Area2D_area_entered(area):
 	if not area.name.begins_with('trampoli'):
