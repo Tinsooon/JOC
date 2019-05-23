@@ -21,7 +21,7 @@ scale = Vector2( 0.212096, 0.20695 )
 frames = SubResource( 1 )
 
 [node name="vida" type="AnimatedSprite" parent="."]
-position = Vector2( 767.447, 30.1631 )
+position = Vector2( 765.687, 27.9625 )
 scale = Vector2( 0.212096, 0.20695 )
 frames = SubResource( 1 )
 

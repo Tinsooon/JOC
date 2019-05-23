@@ -79,14 +79,12 @@ stream = ExtResource( 2 )
 script = ExtResource( 3 )
 
 [node name="pause" type="CanvasLayer" parent="."]
-editor/display_folded = true
 
 [node name="Node" parent="pause" instance=ExtResource( 4 )]
 
 [node name="Node2" parent="pause" instance=ExtResource( 5 )]
 
 [node name="paisatge" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="sotaterra" type="Sprite" parent="paisatge"]
 position = Vector2( 581.396, 1643.45 )
