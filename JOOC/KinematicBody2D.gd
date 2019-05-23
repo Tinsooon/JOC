@@ -7,6 +7,7 @@ onready var vida = get_tree().get_root().get_node('Node2D').vida
 var hurt = false
 var posicio = Vector2(550,4163.792)
 var velocitat_trampoli = Vector2(0, 1000)
+var s = 20
 signal canvia_vida
 
 func _ready():
@@ -57,6 +58,7 @@ func hit(damage):
 	if vida <= 0:
 		mor()
 		get_tree().change_scene("res://Game over/Game over.tscn")
+
 func mor():
 	position = posicio
 
