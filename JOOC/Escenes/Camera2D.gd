@@ -16,9 +16,5 @@ func _process(delta):
 	if objectiu.global_position.y < global_position.y:
 		global_position.y = objectiu.global_position.y
 
-#func _on_VisibilityNotifier2D_screen_exited():
-#	get_tree().change_scene("res://Game over/Game over.tscn")
-
-
-func _on_VisibilityNotifier2D_viewport_exited(viewport):
+func _on_VisibilityNotifier2D_screen_exited():
 	get_tree().change_scene("res://Game over/Game over.tscn")
