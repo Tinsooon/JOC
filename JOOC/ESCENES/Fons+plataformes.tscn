@@ -121,9 +121,6 @@ script = ExtResource( 11 )
 position = Vector2( 586.284, 4162.12 )
 collision_mask = 28
 
-[node name="AnimatedSprite" parent="sprites/conill" index="1"]
-frame = 1
-
 [node name="trampoli" parent="sprites" instance=ExtResource( 13 )]
 position = Vector2( 794.348, 3332.95 )
 
@@ -134,7 +131,6 @@ position = Vector2( 774.256, -156.319 )
 position = Vector2( 286.961, -2823.48 )
 
 [node name="enemics xugos2" type="Node2D" parent="sprites"]
-editor/display_folded = true
 
 [node name="punxes" parent="sprites/enemics xugos2" instance=ExtResource( 14 )]
 position = Vector2( 274.181, -388.005 )

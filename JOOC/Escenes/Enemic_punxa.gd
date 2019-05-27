@@ -3,7 +3,6 @@ var velocitat_maxima = 200
 var gravetat = Vector2(0,11)
 var velocitat = Vector2()
 var damage = 1
-# Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
 
@@ -13,6 +12,7 @@ func _ready():
 
 func _physics_process(delta):
 	mou()
+	_on_Area2D2_area_entered($Area2D2)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
@@ -33,3 +33,8 @@ func _on_Area2D_area_entered(area):
 	if area.has_method('hit'):
 		area.hit(damage)
 	
+
+func _on_Area2D2_area_entered(area):
+	velocitat.x = -velocitat_maxima
+	$AnimatedSprite.flip_h = true
+	velocitat = move_and_slide(velocitat, Vector2(0, -1))

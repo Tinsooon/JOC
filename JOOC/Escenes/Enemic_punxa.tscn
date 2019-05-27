@@ -1,21 +1,21 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Escenes/Enemic_punxa.gd" type="Script" id=1]
-[ext_resource path="res://Personatges+tot/PNG/Enemies/spikeMan_walk1.png" type="Texture" id=2]
-[ext_resource path="res://Personatges+tot/PNG/Enemies/spikeMan_walk2.png" type="Texture" id=3]
-[ext_resource path="res://Personatges+tot/PNG/Enemies/spikeMan_stand.png" type="Texture" id=4]
+[ext_resource path="res://Personatges+tot/PNG/Enemies/spikeMan_stand.png" type="Texture" id=2]
+[ext_resource path="res://Personatges+tot/PNG/Enemies/spikeMan_walk1.png" type="Texture" id=3]
+[ext_resource path="res://Personatges+tot/PNG/Enemies/spikeMan_walk2.png" type="Texture" id=4]
 [ext_resource path="res://Escenes/Area2D.gd" type="Script" id=5]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
-"loop": true,
-"name": "run",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 4 ) ],
+"frames": [ ExtResource( 2 ) ],
 "loop": true,
 "name": "aturat",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "run",
 "speed": 5.0
 } ]
 
@@ -23,13 +23,15 @@ animations = [ {
 radius = 56.6317
 height = 36.0603
 
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 52.0254
+
 [node name="enemic" type="KinematicBody2D"]
 script = ExtResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "run"
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -43,4 +45,11 @@ script = ExtResource( 5 )
 position = Vector2( 0.263519, -0.527039 )
 polygon = PoolVector2Array( -42.3073, -18.6305, -5.52412, -78.2626, 3.69909, -78.2626, 41.4111, -19.9438 )
 
+[node name="Area2D2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2( 0.857361, 15.4327 )
+shape = SubResource( 3 )
+
 [connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
+[connection signal="area_entered" from="Area2D2" to="." method="_on_Area2D2_area_entered"]
