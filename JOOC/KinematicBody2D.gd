@@ -11,6 +11,7 @@ var s = 20
 signal canvia_vida
 
 func _ready():
+	Global.Conill = self
 	position = posicio
 	if is_on_floor():
 		velocitat += salt

@@ -12,5 +12,5 @@ func actualitza_barra (energia):
 	
 
 func _on_Timer_modifica_energia(energia):
-	print('timer acabat')
+	print(energia)
 	actualitza_barra (energia)

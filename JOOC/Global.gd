@@ -5,3 +5,4 @@ func _ready():
 
 
 var energia = 100
+var Conill

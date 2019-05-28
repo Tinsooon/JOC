@@ -9,7 +9,7 @@ func ready():
 func _on_Pastanaga_body_entered(body):
 	if body.get_name() == "conill":
 		self.queue_free()
-		
+		Global.energia += 10
 		
 	
 		
