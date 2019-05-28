@@ -36,5 +36,5 @@ func _on_Area2D_area_entered(area):
 
 func _on_Area2D2_area_entered(area):
 	velocitat.x = -velocitat_maxima
-	$AnimatedSprite.flip_h = true
-	velocitat = move_and_slide(velocitat, Vector2(0, -1))
+	$AnimatedSprite.flip_h = not $AnimatedSprite.flip_h
+	velocitat_maxima *= -1

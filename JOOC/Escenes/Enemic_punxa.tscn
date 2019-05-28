@@ -23,8 +23,8 @@ animations = [ {
 radius = 56.6317
 height = 36.0603
 
-[sub_resource type="CapsuleShape2D" id=3]
-radius = 52.0254
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 63.3253, 35.7026 )
 
 [node name="enemic" type="KinematicBody2D"]
 script = ExtResource( 1 )
@@ -46,9 +46,11 @@ position = Vector2( 0.263519, -0.527039 )
 polygon = PoolVector2Array( -42.3073, -18.6305, -5.52412, -78.2626, 3.69909, -78.2626, 41.4111, -19.9438 )
 
 [node name="Area2D2" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2( 0.857361, 15.4327 )
+position = Vector2( 0, 22.5808 )
 shape = SubResource( 3 )
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
