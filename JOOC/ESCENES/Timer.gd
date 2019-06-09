@@ -9,7 +9,7 @@ func _ready():
 
 func _on_Timer_timeout():
 	print('timeracabat')
-	Global.energia -= 20
+	Global.energia -= 10
 	emit_signal('modifica_energia', Global.energia)
 	
 	if Global.energia <= 0:

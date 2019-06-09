@@ -86,6 +86,17 @@ rect_scale = Vector2( 2.51151, 2.04146 )
 custom_fonts/font = SubResource( 1 )
 text = "exit"
 
+[node name="Label2" type="Label" parent="."]
+margin_left = 87.6438
+margin_top = 128.179
+margin_right = 155.644
+margin_bottom = 151.179
+rect_scale = Vector2( 10, 10 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "SKY JUMP"
+
 [connection signal="pressed" from="Control/VBoxContainer/Play" to="Control" method="_on_Play_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer/Tutorial" to="Control" method="_on_Tutorial_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer/Exit" to="Control" method="_on_Exit_pressed"]
